@@ -418,7 +418,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &577366440
 RectTransform:
@@ -487,7 +487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 368.00128, y: 196.75209}
+  m_AnchoredPosition: {x: 368, y: 196.75}
   m_SizeDelta: {x: 117.7222, y: 56.4901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852972389
@@ -676,7 +676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e5ae1eb6ee44f6e8fd283b4f39fb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: ChooseFromEducationOrBuild
 --- !u!4 &1091858931
 Transform:
   m_ObjectHideFlags: 0
