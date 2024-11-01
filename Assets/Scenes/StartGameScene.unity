@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e5ae1eb6ee44f6e8fd283b4f39fb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: BuildRocketScene
+  nextScene: ChooseFromEducationOrBuild
 --- !u!4 &1091858931
 Transform:
   m_ObjectHideFlags: 0
