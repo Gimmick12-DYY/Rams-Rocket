@@ -1,6 +1,8 @@
 
 
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RocketLaunchScript : MonoBehaviour
 {
@@ -14,6 +16,10 @@ public class RocketLaunchScript : MonoBehaviour
     public double currHeight;
     public double currGravity;
     public double currVelocity;
+
+    [SerializeField] private Text Height;
+    [SerializeField] private Text Velocity;
+    [SerializeField] private Text Accelaration;
 
     void Start()
     {
@@ -40,5 +46,14 @@ public class RocketLaunchScript : MonoBehaviour
         Debug.Log($"Height: {currHeight} m");
         Debug.Log($"Velocity: {currVelocity} m/s");
         Debug.Log($"Acceleration: {currAcceleration} m/s²");
+        DisplayPartInfo();
+    }
+
+
+    private void DisplayPartInfo()
+    {
+        if (Height != null) Height.text = (currHeight / 1000).ToString("F3") + " km";
+        if (Velocity != null) Velocity.text = currVelocity.ToString("F2") + " m/s";
+        if (Accelaration != null) Accelaration.text = currAcceleration.ToString("F3") + " m/s^2";
     }
 }
