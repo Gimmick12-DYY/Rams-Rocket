@@ -87,4 +87,14 @@ public class RocketManagerScript : MonoBehaviour
         double gravityForce = (G * EarthMass * totalWeight) / Mathf.Pow((float)(EarthRadius + currHeight), 2);
         return gravityForce;
     }
+
+    public double getInitialPropulsion()
+    {
+        return totalPropulsion;
+    }
+
+    public double getWeight()
+    {
+        return totalWeight;
+    }
 }

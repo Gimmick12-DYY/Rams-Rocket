@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketManagementScript: {fileID: 338261935}
-  initialPropulsion: 5000
-  rocketMass: 1000
+  initialPropulsion: 0
+  rocketMass: 0
   initialHeight: 0
   currAcceleration: 0
   currHeight: 0

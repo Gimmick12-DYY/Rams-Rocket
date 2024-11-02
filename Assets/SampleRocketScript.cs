@@ -5,9 +5,10 @@ using UnityEngine;
 public class RocketLaunchScript : MonoBehaviour
 {
     public RocketManagerScript rocketManagementScript;
+    private GameObject entireRocket;
 
-    public double initialPropulsion = 5000;
-    public double rocketMass = 1000;
+    public double initialPropulsion;
+    public double rocketMass;
     public double initialHeight = 0;
     public double currAcceleration;
     public double currHeight;
@@ -17,9 +18,11 @@ public class RocketLaunchScript : MonoBehaviour
     void Start()
     {
         rocketManagementScript = GameObject.FindGameObjectWithTag("RocketLaunchScript").GetComponent<RocketManagerScript>();
-
-        rocketManagementScript.UpdateRocketParameters(initialPropulsion, rocketMass);
+        entireRocket = GameObject.FindGameObjectWithTag("EntireRocket");
+        rocketManagementScript.UpdateRocketParameters(entireRocket.GetComponent<RocketPartManager>().GetTotalThrust() * 1000000, entireRocket.GetComponent<RocketPartManager>().GetTotalWeight() * 1000);
         rocketManagementScript.UpdateHeight(initialHeight);
+        initialPropulsion = rocketManagementScript.getInitialPropulsion();
+        rocketMass = rocketManagementScript.getWeight();
     }
 
     void Update()
@@ -39,4 +42,3 @@ public class RocketLaunchScript : MonoBehaviour
         Debug.Log($"Acceleration: {currAcceleration} m/s²");
     }
 }
-

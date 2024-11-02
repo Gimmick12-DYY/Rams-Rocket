@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - RocketLaunchScript
+  - EntireRocket
   layers:
   - Default
   - TransparentFX

@@ -121,4 +121,18 @@ public class RocketPartManager : MonoBehaviour
         propulsionIndex = (propulsionIndex - 1 + propulsionOptions.Length) % propulsionOptions.Length;
         SwapPropulsion(propulsionIndex);
     }
+
+    public float GetTotalWeight()
+    {
+        return payloadOptions[payloadIndex].weight +
+               bodyOptions[bodyIndex].weight +
+               propulsionOptions[propulsionIndex].weight;
+    }
+
+    // Method to return the total thrust of the selected propulsion part
+    public float GetTotalThrust()
+    {
+        return propulsionOptions[propulsionIndex].thrust;
+    }
 }
+
