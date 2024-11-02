@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Copyright (c) 2010 by vernon adams (vern@newtypography.co.uk),
 with Reserved Font Name Bangers.
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
@@ -93,6 +94,8 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 =======
+=======
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
 Copyright (c) 2010 by vernon adams (vern@newtypography.co.uk),
 with Reserved Font Name Bangers.
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
@@ -186,4 +189,7 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
+<<<<<<< HEAD
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
+=======
 >>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686

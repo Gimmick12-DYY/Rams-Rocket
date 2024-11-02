@@ -2,24 +2,35 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
+<<<<<<< HEAD
   serializedVersion: 8
+=======
+  serializedVersion: 6
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bangers SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+<<<<<<< HEAD
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
+=======
+  m_ShaderKeywords: 
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+<<<<<<< HEAD
   m_LockedProperties: 
+=======
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -43,7 +54,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD
     m_Ints: []
+=======
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
     m_Floats:
     - _Ambient: 0.5
     - _Bevel: 0.5
@@ -107,8 +121,11 @@ Material:
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+<<<<<<< HEAD
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+=======
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,13 +139,24 @@ MonoBehaviour:
   m_Name: Bangers SDF
   m_EditorClassIdentifier: 
   m_Version: 1.1.0
+<<<<<<< HEAD
+=======
+  m_Material: {fileID: 2100000}
+  m_SourceFontFileGUID: 5dd49b3eacc540408c98eee0de38e0f1
+  m_SourceFontFile: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
+  m_AtlasPopulationMode: 1
+  InternalDynamicOS: 0
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
   m_FaceInfo:
     m_FaceIndex: 0
     m_FamilyName: Bangers
     m_StyleName: Regular
     m_PointSize: 144
     m_Scale: 1
+<<<<<<< HEAD
     m_UnitsPerEM: 1024
+=======
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
     m_LineHeight: 153.14062
     m_AscentLine: 127.125
     m_CapLine: 107
@@ -144,8 +172,62 @@ MonoBehaviour:
     m_StrikethroughOffset: 42.4
     m_StrikethroughThickness: 0
     m_TabWidth: 28
+<<<<<<< HEAD
   m_Material: {fileID: 2100000}
   m_SourceFontFileGUID: 5dd49b3eacc540408c98eee0de38e0f1
+=======
+  m_GlyphTable: []
+  m_CharacterTable: []
+  m_AtlasTextures:
+  - {fileID: 28584486757587946}
+  m_AtlasTextureIndex: 0
+  m_IsMultiAtlasTexturesEnabled: 0
+  m_ClearDynamicDataOnBuild: 1
+  m_UsedGlyphRects: []
+  m_FreeGlyphRects:
+  - m_X: 0
+    m_Y: 0
+    m_Width: 1023
+    m_Height: 1023
+  m_fontInfo:
+    Name: Bangers
+    PointSize: 137
+    Scale: 1
+    CharacterCount: 95
+    LineHeight: 145.6875
+    Baseline: 0
+    Ascender: 120.9375
+    CapHeight: 101.5625
+    Descender: -24.75
+    CenterLine: 0
+    SuperscriptOffset: 120.9375
+    SubscriptOffset: 0
+    SubSize: 0.5
+    Underline: -12.22
+    UnderlineThickness: 5
+    strikethrough: 40.625
+    strikethroughThickness: 0
+    TabWidth: 342.5
+    Padding: 10
+    AtlasWidth: 1024
+    AtlasHeight: 1024
+  atlas: {fileID: 0}
+  m_AtlasWidth: 1024
+  m_AtlasHeight: 1024
+  m_AtlasPadding: 10
+  m_AtlasRenderMode: 4165
+  m_glyphInfoList: []
+  m_KerningTable:
+    kerningPairs: []
+  m_FontFeatureTable:
+    m_MultipleSubstitutionRecords: []
+    m_LigatureSubstitutionRecords: []
+    m_GlyphPairAdjustmentRecords: []
+    m_MarkToBaseAdjustmentRecords: []
+    m_MarkToMarkAdjustmentRecords: []
+  fallbackFontAssets: []
+  m_FallbackFontAssetTable: []
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
   m_CreationSettings:
     sourceFontFileName: 
     sourceFontFileGUID: 5dd49b3eacc540408c98eee0de38e0f1
@@ -165,6 +247,7 @@ MonoBehaviour:
     fontStyleModifier: 0
     renderMode: 4165
     includeFontFeatures: 0
+<<<<<<< HEAD
   m_SourceFontFile: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
   m_SourceFontFilePath: 
   m_AtlasPopulationMode: 1
@@ -22740,6 +22823,8 @@ MonoBehaviour:
     m_MarkToMarkAdjustmentRecords: []
   m_ShouldReimportFontFeatures: 0
   m_FallbackFontAssetTable: []
+=======
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
   m_FontWeightTable:
   - regularTypeface: {fileID: 0}
     italicTypeface: {fileID: 0}
@@ -22788,6 +22873,7 @@ MonoBehaviour:
   boldSpacing: 7
   italicStyle: 35
   tabSize: 10
+<<<<<<< HEAD
   m_fontInfo:
     Name: Bangers
     PointSize: 137
@@ -22815,6 +22901,8 @@ MonoBehaviour:
     kerningPairs: []
   fallbackFontAssets: []
   atlas: {fileID: 0}
+=======
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
 --- !u!28 &28584486757587946
 Texture2D:
   m_ObjectHideFlags: 0
@@ -22825,6 +22913,7 @@ Texture2D:
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
+<<<<<<< HEAD
   m_IsAlphaChannelOptional: 0
   serializedVersion: 3
   m_Width: 1
@@ -22840,6 +22929,19 @@ Texture2D:
   m_StreamingMipmaps: 0
   m_StreamingMipmapsPriority: 0
   m_VTOnly: 0
+=======
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 0
+  m_Height: 0
+  m_CompleteImageSize: 0
+  m_TextureFormat: 1
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
   m_AlphaIsTransparency: 0
   m_ImageCount: 1
   m_TextureDimension: 2
@@ -22853,11 +22955,17 @@ Texture2D:
     m_WrapW: 0
   m_LightmapFormat: 0
   m_ColorSpace: 0
+<<<<<<< HEAD
   m_PlatformBlob: 
   image data: 1
   _typelessdata: 00
   m_StreamData:
     serializedVersion: 2
+=======
+  image data: 0
+  _typelessdata: 
+  m_StreamData:
+>>>>>>> 6ba40c5e964d50a59ffced71bd7828e3936a1686
     offset: 0
     size: 0
     path: 
