@@ -15,5 +15,5 @@ MonoBehaviour:
   partPrefab: {fileID: 1687160638148157805, guid: 5db107abd88622745a1db862039e9223, type: 3}
   partName: 
   description: 
-  weight: 10
+  weight: 30
   thrust: 0

@@ -21,6 +21,7 @@ public class RocketPartManager : MonoBehaviour
     [SerializeField] private Text partWeightText;
     [SerializeField] private Text partThrustText;
     [SerializeField] private Text totalWeightText;
+    [SerializeField] private Text totalThrustText;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class RocketPartManager : MonoBehaviour
         SwapBody(bodyIndex);
         SwapPropulsion(propulsionIndex);
         UpdateTotalWeight();
+        UpdateTotalThrust();
     }
 
     private void DisplayPartInfo(RocketPartData partData)
@@ -35,7 +37,7 @@ public class RocketPartManager : MonoBehaviour
         if (partNameText != null) partNameText.text = "Name: " + partData.partName;
         if (partDescriptionText != null) partDescriptionText.text = "Description: " + partData.description;
         if (partWeightText != null) partWeightText.text = "Weight: " + partData.weight.ToString();
-        if (partThrustText != null) partThrustText.text = "Thrust: " + partData.thrust.ToString();
+        if (partThrustText != null) partThrustText.text = partData.thrust.ToString() + "MN";
     }
 
     private void UpdateTotalWeight()
@@ -46,7 +48,16 @@ public class RocketPartManager : MonoBehaviour
 
         if (totalWeightText != null)
         {
-            totalWeightText.text = totalWeight.ToString("F2");
+            totalWeightText.text = totalWeight.ToString("F2") + "t";
+        }
+    }
+    private void UpdateTotalThrust()
+    {
+        float totalThrust = propulsionOptions[propulsionIndex].thrust;
+
+        if (totalThrustText != null)
+        {
+            totalThrustText.text = totalThrust.ToString("F2") + "MN";
         }
     }
 
@@ -72,6 +83,7 @@ public class RocketPartManager : MonoBehaviour
         currentPropulsion = Instantiate(propulsionOptions[index].partPrefab, transform);
         DisplayPartInfo(propulsionOptions[index]);
         UpdateTotalWeight(); // Update total weight whenever the propulsion is changed
+        UpdateTotalThrust();
     }
 
     public void NextPayload()
