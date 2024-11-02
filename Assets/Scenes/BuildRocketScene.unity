@@ -1357,7 +1357,11 @@ MonoBehaviour:
   - {fileID: 2621269180744406603, guid: 2dac923830ff60c449360e117d813d51, type: 3}
   - {fileID: 2970771101424841251, guid: 4e2fb86c4efaa72449ff34da96fe0e75, type: 3}
   - {fileID: 1200854284787328198, guid: f80f3bb11ae8b1448ab2a932a38d6927, type: 3}
-  propulsionOptions: []
+  propulsionOptions:
+  - {fileID: 1460749949253823891, guid: 46010b22ee61c4fefa672e90e83e8d85, type: 3}
+  - {fileID: 9165989267158749091, guid: cf88f809258fd4517ade12767f483e69, type: 3}
+  - {fileID: 3224503176731892241, guid: 0d170e8345eb84b45aedd88c44b735c1, type: 3}
+  - {fileID: 4391216837294197475, guid: 3a0121f47246044d0b4f0d9fcf94a49d, type: 3}
 --- !u!4 &1000559416
 Transform:
   m_ObjectHideFlags: 0
