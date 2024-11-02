@@ -8,6 +8,9 @@ public class RocketManagerScript : MonoBehaviour
     private double currHeight;       // Current height above the Earth's surface
     private double acceleration;     // Current acceleration in m/s^2
     private double velocity;         // Current velocity in m/s
+    private double totalFuelWeight;
+    private double fuelConsumptionRate;
+    private const int spaceDis = 110000;
 
     void Start()
     {
@@ -24,6 +27,7 @@ public class RocketManagerScript : MonoBehaviour
         CalculateAcceleration();
 
         // Update height based on current acceleration and velocity
+        ConsumeFuel(Time.deltaTime);
         UpdateHeight(Time.deltaTime);
 
         // Optional: Log values for debugging
@@ -38,9 +42,9 @@ public class RocketManagerScript : MonoBehaviour
 
     public void CalculateAcceleration()
     {
-        if (totalWeight > 0)
+        if (getWeight() > 0)
         {
-            acceleration = netPropulsion / totalWeight;
+            acceleration = netPropulsion / getWeight();
         }
         else
         {
@@ -48,10 +52,12 @@ public class RocketManagerScript : MonoBehaviour
         }
     }
 
-    public void UpdateRocketParameters(double newPropulsion, double newWeight)
+    public void UpdateRocketParameters(double newPropulsion, double newWeight, double totalFuelWeight)
     {
         this.totalPropulsion = newPropulsion;
         this.totalWeight = newWeight;
+        this.totalFuelWeight = totalFuelWeight;
+        fuelConsumptionRate = 5000.0;
     }
 
     public void UpdateHeight(double deltaTime)
@@ -70,6 +76,14 @@ public class RocketManagerScript : MonoBehaviour
 
     public double getVelocity()
     {
+        if (currHeight > spaceDis && getFuelWeight() == 0)
+        {
+            velocity *= 0.998;
+        }
+        if (velocity < 0.1)
+        {
+            velocity = 0;
+        }
         return velocity;
     }
 
@@ -80,11 +94,16 @@ public class RocketManagerScript : MonoBehaviour
 
     public double getGravity()
     {
+        if (currHeight > spaceDis)
+        {
+            return 0.0;
+        }
         double G = 6.674 * Mathf.Pow(10, -11);
         double EarthMass = 5.972 * Mathf.Pow(10, 24);
         double EarthRadius = 6.371 * Mathf.Pow(10, 6);
 
-        double gravityForce = (G * EarthMass * totalWeight) / Mathf.Pow((float)(EarthRadius + currHeight), 2);
+        double gravityForce = (G * EarthMass * getWeight()) / Mathf.Pow((float)(EarthRadius + currHeight), 2);
+
         return gravityForce;
     }
 
@@ -95,6 +114,28 @@ public class RocketManagerScript : MonoBehaviour
 
     public double getWeight()
     {
-        return totalWeight;
+        return this.totalWeight + totalFuelWeight;
+    }
+
+    public void ConsumeFuel(double deltaTime)
+    {
+        // Calculate the amount of fuel to consume over this time period
+        double fuelUsed = fuelConsumptionRate * deltaTime;
+
+        // Ensure fuel does not go below zero
+        if (totalFuelWeight > fuelUsed)
+        {
+            totalFuelWeight -= fuelUsed;
+        }
+        else
+        {
+            totalFuelWeight = 0;
+            totalPropulsion = 0; // No more thrust if fuel is depleted
+        }
+    }
+
+    public double getFuelWeight()
+    {
+        return this.totalFuelWeight;
     }
 }

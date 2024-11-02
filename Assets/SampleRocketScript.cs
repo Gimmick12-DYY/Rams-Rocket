@@ -16,6 +16,7 @@ public class RocketLaunchScript : MonoBehaviour
     public double currHeight;
     public double currGravity;
     public double currVelocity;
+    public double totalFuelWeight;
 
     [SerializeField] private Text Height;
     [SerializeField] private Text Velocity;
@@ -23,12 +24,14 @@ public class RocketLaunchScript : MonoBehaviour
 
     void Start()
     {
+        totalFuelWeight = 300;
         rocketManagementScript = GameObject.FindGameObjectWithTag("RocketLaunchScript").GetComponent<RocketManagerScript>();
         entireRocket = GameObject.FindGameObjectWithTag("EntireRocket");
-        rocketManagementScript.UpdateRocketParameters(entireRocket.GetComponent<RocketPartManager>().GetTotalThrust() * 1000000, entireRocket.GetComponent<RocketPartManager>().GetTotalWeight() * 1000);
+        rocketManagementScript.UpdateRocketParameters(entireRocket.GetComponent<RocketPartManager>().GetTotalThrust() * 1000000, entireRocket.GetComponent<RocketPartManager>().GetTotalWeight() * 1000, totalFuelWeight * 1000);
         rocketManagementScript.UpdateHeight(initialHeight);
         initialPropulsion = rocketManagementScript.getInitialPropulsion();
         rocketMass = rocketManagementScript.getWeight();
+        totalFuelWeight = rocketManagementScript.getFuelWeight();
     }
 
     void Update()
@@ -37,6 +40,7 @@ public class RocketLaunchScript : MonoBehaviour
         currHeight = rocketManagementScript.getHeight();
         currGravity = rocketManagementScript.getGravity();
         currVelocity = rocketManagementScript.getVelocity();
+        totalFuelWeight = rocketManagementScript.getFuelWeight();
 
         rocketManagementScript.CalculateNetPropulsion();
         rocketManagementScript.CalculateAcceleration();

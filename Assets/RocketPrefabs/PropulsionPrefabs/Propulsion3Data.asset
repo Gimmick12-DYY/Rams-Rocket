@@ -16,4 +16,4 @@ MonoBehaviour:
   partName: 
   description: 
   weight: 120
-  thrust: 25
+  thrust: 10
