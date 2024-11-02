@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d77e352af47583e4ea5c1563a3cf39cb, type: 3}
-  m_Name: Body3Data
+  m_Name: Payload3Data
   m_EditorClassIdentifier: 
-  partPrefab: {fileID: 2970771101424841251, guid: 4e2fb86c4efaa72449ff34da96fe0e75, type: 3}
-  partName: Body3
+  partPrefab: {fileID: 2301990337307387503, guid: 4abe9f5c0fd4b3746982d6d4e4b235f8, type: 3}
+  partName: 
   description: 
   weight: 0
   thrust: 0

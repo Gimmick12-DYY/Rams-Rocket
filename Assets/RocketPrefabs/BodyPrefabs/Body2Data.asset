@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77e352af47583e4ea5c1563a3cf39cb, type: 3}
   m_Name: Body2Data
   m_EditorClassIdentifier: 
-  rocketPartPrefab: {fileID: 2621269180744406603, guid: 2dac923830ff60c449360e117d813d51, type: 3}
+  partPrefab: {fileID: 2621269180744406603, guid: 2dac923830ff60c449360e117d813d51, type: 3}
   partName: Body2
   description: 
   weight: 0

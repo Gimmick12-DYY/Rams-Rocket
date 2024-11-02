@@ -414,7 +414,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1000559415}
+      - m_Target: {fileID: 1000559419}
         m_TargetAssemblyTypeName: RocketPartManager, Assembly-CSharp
         m_MethodName: PreviousPayload
         m_Mode: 1
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1000559415}
+      - m_Target: {fileID: 1000559419}
         m_TargetAssemblyTypeName: RocketPartManager, Assembly-CSharp
         m_MethodName: NextPayload
         m_Mode: 1
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1000559415}
+      - m_Target: {fileID: 1000559419}
         m_TargetAssemblyTypeName: RocketPartManager, Assembly-CSharp
         m_MethodName: NextPropulsion
         m_Mode: 1
@@ -1267,7 +1267,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1000559415}
+      - m_Target: {fileID: 1000559419}
         m_TargetAssemblyTypeName: RocketPartManager, Assembly-CSharp
         m_MethodName: PreviousPropulsion
         m_Mode: 1
@@ -1326,8 +1326,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1000559416}
-  - component: {fileID: 1000559415}
   - component: {fileID: 1000559417}
+  - component: {fileID: 1000559419}
   - component: {fileID: 1000559418}
   m_Layer: 0
   m_Name: Rocket
@@ -1336,33 +1336,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1000559415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000559414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e23283be023a6df458869d1465f2c4de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  payloadOptions:
-  - {fileID: 1687160638148157805, guid: 5db107abd88622745a1db862039e9223, type: 3}
-  - {fileID: 3095179523814146911, guid: cb9af765f57f38f4f95c055839fddce8, type: 3}
-  - {fileID: 2301990337307387503, guid: 4abe9f5c0fd4b3746982d6d4e4b235f8, type: 3}
-  - {fileID: 4343995869464830974, guid: dfab0fd9f5f48574f9ffa2c9de9412cc, type: 3}
-  bodyOptions:
-  - {fileID: 3040082281753059670, guid: 10bc58ca35c69364f89c2f6b5128a783, type: 3}
-  - {fileID: 2621269180744406603, guid: 2dac923830ff60c449360e117d813d51, type: 3}
-  - {fileID: 2970771101424841251, guid: 4e2fb86c4efaa72449ff34da96fe0e75, type: 3}
-  - {fileID: 1200854284787328198, guid: f80f3bb11ae8b1448ab2a932a38d6927, type: 3}
-  propulsionOptions:
-  - {fileID: 1460749949253823891, guid: 46010b22ee61c4fefa672e90e83e8d85, type: 3}
-  - {fileID: 9165989267158749091, guid: cf88f809258fd4517ade12767f483e69, type: 3}
-  - {fileID: 3224503176731892241, guid: 0d170e8345eb84b45aedd88c44b735c1, type: 3}
-  - {fileID: 4391216837294197475, guid: 3a0121f47246044d0b4f0d9fcf94a49d, type: 3}
 --- !u!4 &1000559416
 Transform:
   m_ObjectHideFlags: 0
@@ -1445,6 +1418,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db352b2e3cad3a84c949aea710d767c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1000559419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000559414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23283be023a6df458869d1465f2c4de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  payloadOptions:
+  - {fileID: 11400000, guid: dced2fbec5f059b459686aeff0949d29, type: 2}
+  - {fileID: 11400000, guid: 33fe82d2a989b3e4db8ac3a42df149b6, type: 2}
+  - {fileID: 11400000, guid: 608437fa63eb55a4b863c6700a218275, type: 2}
+  - {fileID: 11400000, guid: b517009ac5fa7854eb94b65aa0c7137c, type: 2}
+  bodyOptions:
+  - {fileID: 11400000, guid: 576cb90c72152fb4986efcda4d02dbbf, type: 2}
+  - {fileID: 11400000, guid: 2e214a4c4d4cd40478f94eb782881d5b, type: 2}
+  - {fileID: 11400000, guid: 4170b40a5adc24d4aacd954665b5a91a, type: 2}
+  - {fileID: 11400000, guid: 033adf0c4b1c8bf4aa395850dfb1a2e2, type: 2}
+  propulsionOptions:
+  - {fileID: 11400000, guid: b9edecffa4f58c94a9036c906fcae06d, type: 2}
+  - {fileID: 11400000, guid: 99848faac2421104d9c00aea83226191, type: 2}
+  - {fileID: 11400000, guid: ed9037bea47991341833bda7ce4ba664, type: 2}
+  - {fileID: 11400000, guid: a75d63e12b4d596428c02babcfbd503f, type: 2}
+  partNameText: {fileID: 0}
+  partDescriptionText: {fileID: 0}
+  partWeightText: {fileID: 0}
+  partThrustText: {fileID: 0}
+  totalWeightText: {fileID: 0}
 --- !u!1 &1226353859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,7 +1611,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1000559415}
+      - m_Target: {fileID: 1000559419}
         m_TargetAssemblyTypeName: RocketPartManager, Assembly-CSharp
         m_MethodName: PreviousBody
         m_Mode: 1
@@ -2093,7 +2098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1000559415}
+      - m_Target: {fileID: 1000559419}
         m_TargetAssemblyTypeName: RocketPartManager, Assembly-CSharp
         m_MethodName: NextBody
         m_Mode: 1

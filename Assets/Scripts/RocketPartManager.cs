@@ -1,50 +1,79 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RocketPartManager : MonoBehaviour
 {
-    // Arrays to hold the prefabs for each part, serialized for Inspector access
-    [SerializeField] private GameObject[] payloadOptions;
-    [SerializeField] private GameObject[] bodyOptions;
-    [SerializeField] private GameObject[] propulsionOptions;
+    [SerializeField] private RocketPartData[] payloadOptions;
+    [SerializeField] private RocketPartData[] bodyOptions;
+    [SerializeField] private RocketPartData[] propulsionOptions;
 
-    // References to the current parts on the rocket
     private GameObject currentPayload;
     private GameObject currentBody;
     private GameObject currentPropulsion;
 
-    // Indexes to track the currently selected option for each part
     private int payloadIndex = 0;
     private int bodyIndex = 0;
     private int propulsionIndex = 0;
 
-    // Start method to initialize the rocket with the first parts in each array
+    // Optional: UI elements to display part information and total weight
+    [SerializeField] private Text partNameText;
+    [SerializeField] private Text partDescriptionText;
+    [SerializeField] private Text partWeightText;
+    [SerializeField] private Text partThrustText;
+    [SerializeField] private Text totalWeightText;
+
     private void Start()
     {
         SwapPayload(payloadIndex);
         SwapBody(bodyIndex);
         SwapPropulsion(propulsionIndex);
+        UpdateTotalWeight();
     }
 
-    // Methods to swap each part based on the given index
+    private void DisplayPartInfo(RocketPartData partData)
+    {
+        if (partNameText != null) partNameText.text = "Name: " + partData.partName;
+        if (partDescriptionText != null) partDescriptionText.text = "Description: " + partData.description;
+        if (partWeightText != null) partWeightText.text = "Weight: " + partData.weight.ToString();
+        if (partThrustText != null) partThrustText.text = "Thrust: " + partData.thrust.ToString();
+    }
+
+    private void UpdateTotalWeight()
+    {
+        float totalWeight = payloadOptions[payloadIndex].weight +
+                            bodyOptions[bodyIndex].weight +
+                            propulsionOptions[propulsionIndex].weight;
+
+        if (totalWeightText != null)
+        {
+            totalWeightText.text = "Total Weight: " + totalWeight.ToString("F2");
+        }
+    }
+
     private void SwapPayload(int index)
     {
         if (currentPayload != null) Destroy(currentPayload);
-        currentPayload = Instantiate(payloadOptions[index], transform);
+        currentPayload = Instantiate(payloadOptions[index].partPrefab, transform);
+        DisplayPartInfo(payloadOptions[index]);
+        UpdateTotalWeight(); // Update total weight whenever the payload is changed
     }
 
     private void SwapBody(int index)
     {
         if (currentBody != null) Destroy(currentBody);
-        currentBody = Instantiate(bodyOptions[index], transform);
+        currentBody = Instantiate(bodyOptions[index].partPrefab, transform);
+        DisplayPartInfo(bodyOptions[index]);
+        UpdateTotalWeight(); // Update total weight whenever the body is changed
     }
 
     private void SwapPropulsion(int index)
     {
         if (currentPropulsion != null) Destroy(currentPropulsion);
-        currentPropulsion = Instantiate(propulsionOptions[index], transform);
+        currentPropulsion = Instantiate(propulsionOptions[index].partPrefab, transform);
+        DisplayPartInfo(propulsionOptions[index]);
+        UpdateTotalWeight(); // Update total weight whenever the propulsion is changed
     }
 
-    // Button functions to cycle forward through each part option
     public void NextPayload()
     {
         payloadIndex = (payloadIndex + 1) % payloadOptions.Length;
@@ -63,7 +92,6 @@ public class RocketPartManager : MonoBehaviour
         SwapPropulsion(propulsionIndex);
     }
 
-    // Button functions to cycle backward through each part option
     public void PreviousPayload()
     {
         payloadIndex = (payloadIndex - 1 + payloadOptions.Length) % payloadOptions.Length;
