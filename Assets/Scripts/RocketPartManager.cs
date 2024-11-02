@@ -46,7 +46,7 @@ public class RocketPartManager : MonoBehaviour
 
         if (totalWeightText != null)
         {
-            totalWeightText.text = "Total Weight: " + totalWeight.ToString("F2");
+            totalWeightText.text = totalWeight.ToString("F2");
         }
     }
 
