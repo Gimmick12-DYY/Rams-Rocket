@@ -17,10 +17,12 @@ public class RocketLaunchScript : MonoBehaviour
     public double currGravity;
     public double currVelocity;
     public double totalFuelWeight;
+    private double fuelPercent;
 
     [SerializeField] private Text Height;
     [SerializeField] private Text Velocity;
     [SerializeField] private Text Accelaration;
+    [SerializeField] private Text percentFuel;
 
     void Start()
     {
@@ -59,6 +61,11 @@ public class RocketLaunchScript : MonoBehaviour
         if (Height != null) Height.text = (currHeight / 1000).ToString("F3") + " km";
         if (Velocity != null) Velocity.text = currVelocity.ToString("F2") + " m/s";
         if (Accelaration != null) Accelaration.text = currAcceleration.ToString("F3") + " m/s^2";
+        if (totalFuelWeight != 0)
+        {
+            fuelPercent = ((rocketManagementScript.getFuelWeight() / 1000) / 300) * 100;
+            percentFuel.text = fuelPercent.ToString("F2") + "%";
+        }
     }
 
     public double getHeight()
