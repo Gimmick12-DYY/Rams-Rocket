@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 352031995}
   - component: {fileID: 352031994}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Closest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 481516116}
   - component: {fileID: 481516115}
   m_Layer: 0
-  m_Name: Quad (1)
+  m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 1298397144}
   - component: {fileID: 1298397143}
   m_Layer: 0
-  m_Name: Quad (2)
+  m_Name: Furthest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
