@@ -73,5 +73,10 @@ public class RocketLaunchScript : MonoBehaviour
         return currHeight; //in meter
     }
 
+    public double getFuel()
+    {
+        return rocketManagementScript.getFuelWeight();
+    }
+
 
 }
