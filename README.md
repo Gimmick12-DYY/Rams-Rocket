@@ -51,6 +51,11 @@ We created multiple **C# Scripts** for the Unity project, which will be illustra
 The lack of assets that we need to use in the Unity project was yet another big challenge for us to resolve. We lacked the time to inidividually design different styles of rocket parts as well as other visual elements in the game. We came up with the idea of utilizing **generative AI** to produce most of the art for our game. The main tool that we used was **Adobe Express**, the powerful generative tool provided by Adobe. The chief advantage of **Adobe Express** was its ability to select through different artistic styles during generation, through which we were able to finish a Game project with an unified artistic style. The result was magnificent. Through the help of **Adobe Express**, we were able to generate 4 sets of Rocket design, sum to 12 distinctive assets, as well as all the background images for our game scenes. 
 
 ## Math Function
+There are five main functions for mathematical calculation of the rocket **calculateNetPropulsion, ConsumeFuel calculateAcceleration, updateHeight,** and **getGravity.**
+
+Before the launch, the rocket can be assembled on the player's preference that changes the weight and the propulsion of the rocket. 
+
+We calculate the gravitational force using G = $\frac{Mm}{r^2}$ where total weight of the rocket depends on the player chosen payload and body before the launch. The radius in the formula is calculated as the combined distance of the radius of the earth (constant) and the distance traveled of the rocket after the launch, which is changing. We use the **updateHeight** function for the distance traveled. To reflect the real-world scenario, we use the **calculateNetPropulsion** to subtract the gravitational force derived from **getGravity** from the **totalPropulsion**. To show how the rocket is accelerating, we use the **calculateAcceleration** function to reflect the changing acceleration of the rocket while it is traveling into the space. We also have the **ConsumeFuel** function to calculate how many fuel has been consumed during the travel. Here, it is significant because the fuel consumption rate reflects the total weight of the rocket that reflects the gravitational force between the rocket body and the earth. 
 
 ## Accessibility on Website and WebGL Build
 
