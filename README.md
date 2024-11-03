@@ -68,6 +68,14 @@ We calculate the gravitational force using G = $\frac{Mm}{r^2}$ where total weig
 ## Website Platform and WebGL Build
 We aimed to make our game accessible to a broad audience by hosting it on a website. To achieve this, we chose to build the game using **WebGL**, allowing seamless display of game elements across web platforms. Unity served as our development engine, providing flexibility for building and deploying the game in multiple formats should we decide to explore other hosting options in the future. For deployment, we created a **static website** incorporating the **WebGL** element to showcase the game. GitHub Pages was selected as our hosting service, offering a cost-effective solution for static sites. Additionally, we purchased a custom domain and **configured DNS** records to direct traffic to GitHub’s servers, ensuring our website was accessible through our chosen domain. Initially, we launched our game on a **.tech domain**, but it was mistakenly flagged as malware by the school's network, likely due to the absence of an **SSL security certificate**. To resolve this, we secured a new .site domain, where we will implement HTTPS to ensure secure, trusted access to our website and enhance user confidence .
 
+## Possible Extensions and Updates for the Project
+## What's next for Rams-Rocket
+There are two categories that we would like to improve: Graphic and User Interface for more interactions and complex physics and mathematics to power the rocket for more functions.    
+
+We would like to improve more on Learn part of the game for educational interactions with interactive labels for each part of the rocket. In the future, we would also like to include 3D models for parts as well. We also would like to add a graphical feature to mimic parameters like _current velocity, current acceleration,_ and _remaining fuel._     
+
+For more mathematical calculations, we would like to include _Aerodynamic Drag_ to experience air resistance, _Altitude-Based Air Density_ to simulate the Earth's atmosphere, and _Rocket Staging_.
+
 ## Delegation of Work and Roles
 **"Game Dev":** Lingxiao & Yuyang  
 The two individuals primarily focused on Unity development, including the coding for most C# scripts, scene designs, and engine build.   
