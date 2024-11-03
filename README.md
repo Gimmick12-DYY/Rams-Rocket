@@ -42,7 +42,10 @@ It turns out that Unity was especially helpful for our development and we were a
 
 We created multiple **C# Scripts** for the Unity project, which will be illustrated in the following list:
 
-### SceneChangeManager
+### SceneManagerTool
+### DontDestroyOnLoad
+### RocketPartManager
+### 
 
 ## Graphics Involved
 The lack of assets that we need to use in the Unity project was yet another big challenge for us to resolve. We lacked the time to inidividually design different styles of rocket parts as well as other visual elements in the game. We came up with the idea of utilizing **generative AI** to produce most of the art for our game. The main tool that we used was **Adobe Express**, the powerful generative tool provided by Adobe. The chief advantage of **Adobe Express** was its ability to select through different artistic styles during generation, through which we were able to finish a Game project with an unified artistic style. The result was magnificent. Through the help of **Adobe Express**, we were able to generate 4 sets of Rocket design, sum to 12 distinctive assets, as well as all the background images for our game scenes. 
