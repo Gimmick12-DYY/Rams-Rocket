@@ -7,11 +7,12 @@ public class ScrollUV : MonoBehaviour
 
     private MeshRenderer mr;
     private Material mat;
-    public double Height;
 
     void Start()
     {
+        // Get the RocketLaunchScript component with the specified tag
         rocketStatsInterface = GameObject.FindGameObjectWithTag("RocketStatistics").GetComponent<RocketLaunchScript>();
+
         // Get the MeshRenderer and its material
         mr = GetComponent<MeshRenderer>();
         mat = mr.material;
@@ -19,21 +20,21 @@ public class ScrollUV : MonoBehaviour
 
     void Update()
     {
-        // Access the current velocity from RocketStatisticInterface
         if (rocketStatsInterface != null)
         {
-            //float rocketVelocity = (float)rocketStatsInterface.GetVerticalVelocity(); // Adjust if necessary
+            // Get the rocket's current vertical velocity
+            float rocketVelocity = (float)rocketStatsInterface.currVelocity;
 
-            // Adjust scroll speed based on the rocket's velocity and parallax factor
-            //float scrollSpeed = rocketVelocity * parallaxFactor;
+            // Calculate scroll speed based on velocity and parallax factor
+            float scrollSpeed = rocketVelocity * parallaxFactor;
 
-            // Only scroll if the rocket is moving (i.e., velocity is not zero)
-            //if (rocketVelocity != 0)
-            ///{
-            //    Vector2 offset = mat.mainTextureOffset;
-            //    offset.y += scrollSpeed * Time.deltaTime;
-            //    mat.mainTextureOffset = offset;
-            //}
+            // Update texture offset if the rocket is moving
+            if (rocketVelocity != 0)
+            {
+                Vector2 offset = mat.mainTextureOffset;
+                offset.y += scrollSpeed * Time.deltaTime;
+                mat.mainTextureOffset = offset;
+            }
         }
     }
 }

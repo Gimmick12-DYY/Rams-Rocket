@@ -211,9 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b705200779bc6a479fde3f44614ac99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: 1
+  parallaxFactor: 0.01
   rocketStatsInterface: {fileID: 0}
-  Height: 0
 --- !u!64 &352031995
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -336,9 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b705200779bc6a479fde3f44614ac99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: 2
+  parallaxFactor: 0.005
   rocketStatsInterface: {fileID: 0}
-  Height: 0
 --- !u!64 &481516116
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -830,9 +828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b705200779bc6a479fde3f44614ac99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: 3
+  parallaxFactor: 0.002
   rocketStatsInterface: {fileID: 0}
-  Height: 0
 --- !u!64 &1298397144
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1019,7 +1016,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parallaxFactor: 0.1
   rocketStatsInterface: {fileID: 0}
-  Height: 0
 --- !u!4 &1636818092
 Transform:
   m_ObjectHideFlags: 0
