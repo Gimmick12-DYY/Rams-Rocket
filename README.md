@@ -21,9 +21,9 @@ Overall, We created **8 scenes** in Unity:
 **StartGameScene**  
 The scene is the introduction to the Game, with a button that will lead to the next scene.    
 **ChooseModeScene**   
-The scene is the site for the player to choose between the two modes. There're two buttons that will lead to the corresponding scenes for the &nbsp;&nbsp;&nbsp;&nbsp;two modes.    
+The scene is the site for the player to choose between the two modes. There're two buttons that will lead to the corresponding scenes for the two modes.    
 **LearnModeScene**  
-The scene is the mother to three children scene, the players are able to choose what part of the rocket they want to learn about by clicking &nbsp;&nbsp;&nbsp;&nbsp;the corresponding buttons.  
+The scene is the mother to three children scene, the players are able to choose what part of the rocket they want to learn about by clicking the corresponding buttons.  
 **BodyScene**  
 The scene containing the information for the body part of the rocket.  
 **PayloadScene**  
