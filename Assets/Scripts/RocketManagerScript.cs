@@ -78,7 +78,7 @@ public class RocketManagerScript : MonoBehaviour
     {
         if (currHeight > spaceDis && getFuelWeight() == 0)
         {
-            velocity *= 0.998;
+            velocity *= 0.999;
         }
         if (velocity < 0.1)
         {
