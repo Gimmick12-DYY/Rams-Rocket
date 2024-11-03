@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RocketLaunchScript
   - EntireRocket
+  - RocketStatistics
   layers:
   - Default
   - TransparentFX

@@ -60,4 +60,11 @@ public class RocketLaunchScript : MonoBehaviour
         if (Velocity != null) Velocity.text = currVelocity.ToString("F2") + " m/s";
         if (Accelaration != null) Accelaration.text = currAcceleration.ToString("F3") + " m/s^2";
     }
+
+    public double getHeight()
+    {
+        return currHeight; //in meter
+    }
+
+
 }
