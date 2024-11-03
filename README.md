@@ -70,9 +70,9 @@ We aimed to make our game accessible to a broad audience by hosting it on a webs
 
 ## Delegation of Work and Roles
 **"Game Dev":** Lingxiao & Yuyang  
-The two individuals primarily focused on Unity development, including the coding for most C# scripts, scene designs, and engine build.
-**"Chief Scientist":** Wei Phyo  
-The individual primarily focused on building the **Learn** mode, including finding the background physics concepts and theories, as well as developing the math functions for us to calculate rocket velocity.
+The two individuals primarily focused on Unity development, including the coding for most C# scripts, scene designs, and engine build.   
+**"Chief Scientist":** Wei Phyo   
+The individual primarily focused on building the **Learn** mode, including finding the background physics concepts and theories, as well as developing the math functions for us to calculate rocket velocity.   
 **"Web Dev":** Ben  
-The individual primarily focused on setting up the configuration of the website access of our game, including DNS configuration, WebGL loading, as well as generating the visual elements that were used in our project.
+The individual primarily focused on setting up the configuration of the website access of our game, including DNS configuration, WebGL loading, as well as generating the visual elements that were used in our project.   
 
